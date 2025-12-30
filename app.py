@@ -2,8 +2,9 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
-import streamlit as st
 import requests
+
+user = {} 
 
 BACKEND_VALIDATE_URL = "http://localhost:3000/api/auth/validate-token"
 
@@ -36,7 +37,8 @@ except Exception:
 
 # ✅ Authenticated UI
 st.success("✅ Authenticated")
-st.write(f"Welcome **{user['username']}**")
+st.write(f"Welcome **{user.get('username', 'User')}**")
+
 
 st.header("Secure Streamlit Dashboard")
 st.write("Only logged-in users can see this.")
