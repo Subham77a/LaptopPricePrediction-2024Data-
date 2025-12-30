@@ -6,7 +6,7 @@ import requests
 
 user = {} 
 
-BACKEND_VALIDATE_URL = "http://localhost:3000/api/auth/validate-token"
+BACKEND_VALIDATE_URL = "https://lapwise-backend.onrender.com/api/auth/validate-token"
 
 st.set_page_config(page_title="Secure Streamlit App")
 
